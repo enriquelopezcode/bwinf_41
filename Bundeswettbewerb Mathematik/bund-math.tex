@@ -1,0 +1,181 @@
+\documentclass[11pt,a4paper,oneside,]{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[german]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[a4paper,top=2cm,bottom=2cm,left=5cm,right=2cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{stix}
+\usepackage{bm}
+\usepackage{svg}
+
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{ \textbf {Bundeswettbewerb Mathematik}}
+\author{Levente Mihalyi, Thomas Grumann, Enrique Lopez}
+\usepackage[parfill]{parskip}
+\setlength{\belowcaptionskip}{15pt plus 3pt minus 2pt}
+\begin{document}
+\maketitle
+
+
+\section{Aufgabe 1}
+Zur eindeutigen Zuordnung: Tick besitzt 20 Tickets, Trick 23 und Track 25.\\
+
+
+{\raggedright {\bf (a) }
+}
+Fahren sie 20 mal hintereinander, so hat Tick am Ende keine Tickets mehr, da die drei alle 20 Fahrten zusammen absolvieren müssen. 
+
+\bigskip
+{\raggedright{\bf (b) }}
+Alle drei fahren 19 mal. Dann hat Tick 1, Trick 4 und Track 6 Tickets. Anschließend gibt Trick die Hälfte seiner Tickets an Tick und erst danach gibt Track die Hälfte seiner Tickets an Trick ab. Nun haben Tick und Track beide 3 Tickets und Trick 5.\\
+Wenn sie alle jetzt noch dreimal fahren, haben zwei, nämlich Tick und Track, keine Tickets mehr. \bigskip
+
+{\raggedright{\bf (c)}}
+Da nur alle drei gemeinsam fahren können, können pro Runde nur genau drei Tickets aufgebraucht werden. Damit es am Ende keine Tickets mehr gibt, muss die Anzahl aller Tickets durch drei Teilbar sein.\\
+Da aber $(20+23+25) \equiv 2 \mod{3} $, ist die Anzahl aller Tickets nicht durch drei teilbar und somit kann sie zu keinem Zeitpunkt $=0$ sein.
+
+
+
+\newpage
+\section{Aufgabe 2}
+\begin{align}
+\intertext {$x,y,z, \in \mathbb{Z}$ }
+& x^2+y^2+z^2-xy-yz-zx &&= 3 \qquad\Big| \cdot 2  \nonumber\\
+\Leftrightarrow & 2x^2+2y^2+2z^2-2xy-2yz-2zx &&=  6 \nonumber \\ 
+\intertext {Durch Umformen mit der zweiten binomischen Formel erhält man: } 
+\Leftrightarrow & (x-y)^2 + (x-z)^2 + (y-z)^2 &&= 6 \qquad 
+\end{align}
+\begin{flalign}
+    a &= (x-y)^2&\nonumber \\
+    b &= (x-z)^2&\nonumber \\
+    c &= (y-z)^2&\nonumber \\
+        &\Rightarrow  a+b+c = 6 \nonumber
+\end{flalign}
+6 als Summe von drei Quadratzahlen zu schreiben, geht nur mit 1,1,4. Dafür gibt es in unserem Fall 3 Möglichkeiten, da entweder a=4, b=4 oder c=4 sein kann.\\
+Aus $x-y$ und $y-z$ folgt 
+\begin{align}x-z = x-y + y-z\end{align}
+Wenn man noch beachtet, dass die Differenzen nur die Werte $\pm1$ und $\pm2$ annehmen können, kann man folgende Fallunterscheidung durchführen, bei denen die Gleichungen (1) und (2) erfüllt sind:
+
+Fall 1: $(x-y)^2=4 \Rightarrow$ Wenn $x-y = 2$, dann $x-z = 1 $ und $ y-z = -1$ bzw. $x-z = -1 $ $ y-z = +1$, wenn $x-y = -2$\newline
+$\Rightarrow z=y+1 \land x= z+1$ bzw. $z=x+1 \land y=z+1$\\
+
+{\raggedright{Fall 2}}: $(x-z)^2=4 \Rightarrow$ Wenn $x-z = 2$, dann $x-y = 1$ und $y-z = 1$, wenn $x-z = -2$, dann $x-y =-1 $ und $y-z = -1$\\
+$\Rightarrow y=z+1 \land x=y+1$ bzw. $y=x+1 \land z=y+1$\\
+
+Fall 3: $(y-z)^2 = 4 \Rightarrow$ Wenn $y-z = 2$, dann $x-z = 1$ und $x-y = -1$, wenn $y-z=-2, $ dann $ x-z = -1$ und $x-y = 1$\\
+$\Rightarrow x=z+1 \land y=x+1$ bzw. $x=y+1 \land z=x+1$\\
+
+Aus diesen drei Fällen folgt, dass das Tripel $(x,y,z)$ in jedem Fall aus drei aufeinanderfolgenden Zahlen bestehen muss.
+Somit kann man alle Lösungstripel aus der Menge $A = \{t; t+1; t+2\ | t\in \mathbb{Z}$\} bilden.
+Somit lauten alle Lösungstripel:\\
+$(t,t+1,t+2),(t,t+2,t+1),(t+1,t,t+2),(t+1,t+2,t),(t+2,t,t+1),(t+2,t+1,t).$\\
+\newpage
+\section{Aufgabe 3}
+Die gegebene Figur haben wir durch ein weiteres Parallelogramm FDBE ergänzt. Da E durch Spiegelung am Diagonalenschnittpunkt P des Parallelogramms ABCD in F übergeht und die Punkte B und D ebenfalls zu P symmetrisch sind, sind die Strecken $\overline{FD}$ und $\overline{BE}$ ebenfalls symmetrisch zu P und daher auch parallel. Gleiches gilt auch für $\overline{BF}$ und $\overline{ED}$, FBED ist also ein Parallelogramm.\\
+Die Umkreise der Dreiecke AEB und CED, die wir mit $k_1$ bzw. $k_2$ bezeichnen, schneiden sich außer im Punkt E noch in einem Punkt S. Eine Außnahme ist, wenn sich die Kreise $k_1$ und $k_2$ nur berühren. Diesen Fall betrachten wir später. $k_3$ und $k_4$ sind die Umkreise um BFC bzw. DFA \\
+
+{\bf Fall 1:}\\
+In diesem Fall ist zu beweisen, dass $S \in k_3$ und $S \in k_4$. \\
+{\underline Beweis für $k_3$:}\\
+Wir zeichnen die Strecken $\overline{SC},\, \overline{SE}, $ und $ \overline{SB}  $ ein.
+\begin{figure}[h]
+    \caption{}
+    \includegraphics[scale=0.12, clip, trim = 400 200 300 0]{Abbildung1.png}
+    \label{fig:abb1}
+\end{figure}\\
+
+S liegt auf $k_3 $, wenn die Umfangswinkel $ \theta_1 $ und $\theta_2$ bei F bzw. S über der Sehne $\overline{CE}$ gleich weit sind.
+Den Winkel $\beta$ finden wir auch bei Punkt D, da die eingezeichnete Halberade  $g \parallel \overline{AE}$ ist. Da $\overline{FC} \parallel \overline{AE}$ und $ \overline{AE} \parallel g$, sowie $\overline{FB} \parallel \overline{DE}$, gilt $\boldsymbol{\theta_1 = \varepsilon + \beta}$.\\
+\newline
+Weiter lässt sich folgender Zusammenhang mit dem Umfangswinkelsatz begründen: Der Winkel bei S über der Sehne $\overline{BE} $ entspricht $\beta$ und der Winkel bei S über der Sehne $\overline{EC}$ entspricht $\varepsilon$. \\
+Somit gilt $\theta_1 = \theta_2 = \varepsilon + \beta \Rightarrow S \in k_3$.\\
+\newpage
+Beweis für $k_4$:\\ 
+Zusätzlich zu $k_4$ ergänzen wir die zeichnung mit den Strecken $\overline{AS}, \, \overline{DS}$  ($\overline{SE}$ wird nicht mehr benötigt). 
+\begin{figure}[h]
+    \caption{}
+    \includegraphics[scale=0.12, clip, trim = 600 400 300 0]{Abbildung2.png}
+    \label{fig:abb2}
+\end{figure}\\
+Nach gleichem Prinzip liegt S auf $k_4$, wenn die Umfangswinkel über der Sehne $\overline{AD} $ bei F und bei S gleich groß sind. Zu zeigen: $\theta_3 = \theta_4$\\
+Anm.: $\gamma = \gamma_1 + \gamma_2$\\
+Da $\overline{FD} \parallel \overline{BE}$ und $\overline{AB} \parallel \overline{DC}$, sowie $\overline{AF} \parallel \overline{EC}$ gilt $\theta_3 = \gamma + \delta$
+\begin{align}
+    \theta_4 &=360^\circ-\varphi_1 - \theta_2 - \varphi_1 
+    \intertext{$\varphi_1$ ist Umfangswinkel von $k_1$ über der Sehne $\overline{AB}$. Entsprechend ist der Umfangsinkel bei E über $\overline{AB}$ gleich groß. Somit gilt $\varphi_1 = 180^\circ -\beta - \gamma$}
+    \intertext{Mit gleichem Prinzip finden wir $\varphi_2$ bei E als umfangswinkel über der Sehne $\overline{DC}$. Also gilt} 
+    \varphi_2 &= 180^\circ - \varepsilon-\delta \nonumber
+    \intertext{Alles in (3) eingesetzt ergibt sich:}
+    \theta_4&=360^\circ-180^\circ+\beta+\gamma-\theta_2-180^\circ+\varepsilon+\delta \nonumber \\
+    \Leftrightarrow \quad \theta_4&=\gamma+\delta+\varepsilon+\beta-\theta_2 \nonumber
+    \intertext{Dank $\theta_2 = \varepsilon + \beta $ (s.o.) erhalten wir }
+    \Leftrightarrow \quad \theta_4 &= \gamma + \varepsilon \qquad \large\bm{\Rightarrow \theta_3 = \theta_4}, \normalsize \nonumber
+    \intertext{was zu zeigen war. Somit haben alle vier Kreise den Punkt S gemeinsam.}\nonumber
+\end{align}\\
+\newepage
+Fall 2: S und E sind identisch\\
+Man könnte versuchen, E so zu positionieren, dass er mit S zusammenfällt. Dann wäre die obige Begründung  mithilfe des Umfangswinkelsatzes, die auf zwei Schnittpunkten von $k_1$ und $k_2$ basiert, nicht mehr haltbar. Da sich dann $k_1$ und $k_2$ nur noch berühren würden, gäbe es nur noch 3 bekannte Punkte auf ihnen und folglich nur einen verwendbaren Umfangswinkel über $\overline{BE}$. Dieser Fall kann aber nur eintreten, wenn sich die beiden Kreise im Schwerpunkt P berühren.\\
+Denn nur wenn E auf P liegt, sind die zwei Dreiecke AEB und CED punktsymmetrisch zu diesem Punkt. Dementsprechend sind auch die Umkreise nur in diesem Fall punktsymmetrisch zu P.  Wenn man einen Kreis $k$ an einem Punkt $P_k \in k$ spiegelt, dann ist $P_k' = P_k$ und entsprechend berühren sich $k$ und $k'$ im Punkt $P_k$.
+In diesem Spezialfall lägen E und F (wegen Spiegelung von E an P) in P, weshalb AECF kein Parallelogramm und die Bedingung aus der Aufgabenstellung nicht mehr erfüllt wäre. (Die vier Kreise würden sich natürlich trotzdem allein schon wegen ihrer Definition in $P$ bzw $F$ bzw $E$ schneiden).
+\newpage
+\section{Aufgabe 4}
+{\bf (a)}
+{\bf Fall 1}: $\alpha$ ist nicht periodisch:\\
+Wenn $\alpha$ rational und nicht periodisch ist, dann hat sie eine endliche Anzahl an Nachkommastellen. Deshalb haben auch alle $z_m$ und $s_n$ eine endliche Anzahl an Nachkommastellen und sind somit ebenfalls rational.\\
+
+{\bf Fall 2}: $\alpha$ ist periodisch:\\
+Zuerst definieren wir den Abstand zwischen $\alpha_i$ und $\alpha_j$ als $|j-i|$.) sowie die Bezeichnung der Zeilen als m und die der Spalten (bzw. in einer Zeile die Stelle einer Zahl) als n.\\
+
+Wir beweisen die Periodizität von $\alpha$ nur für jede Ziffer $\alpha_i$ einer ungeraden Spalte. Dadurch, dass der Sprung (=Abstand) von einer Ziffer in einer ungeraden Spalte zu einer Ziffer in einer geraden in jeder Spalte konstant ist (in $m=1$ ist der Sprung 1, in $m=3 $ beträgt er $ 1+2\cdot2$, allg. für $m=x$: $1+2\cdot (x-1)$, warum $x-1$ siehe unten)  macht es für die periodische Eigenschaft von $z_m$ keinen Unterschied, ob die Ziffern der geraden Spalten auch betrachtet werden oder nicht. Denn, angenommen wir haben eine periodische Zahl $\beta$, von dessen Ziffern wir anhand eines Musters einige auswählen und zur Zahl $j_1$ zusammenfügen, die dann periodisch ist, so könnten wir (rechts) neben jede Ziffer $\beta_i$ von $j_1$ eine weitere Ziffer $\beta_(i+x)$ mit festem Abstand $x$ schreiben, und $j_1$ wäre immernoch periodisch. 
+
+Wir nutzen, dass die vereinfachte erste Zeile aus den ungeraden Quadratzahlen besteht (was wiederum durch die quadratische Anordnung bedingt ist; man erkennt, dass dieser Weg der Zahlen aus immer größer werdenden Quadraten besteht):
+
+{\bf Beweis der Periodizität der Zeilen}:\\
+Die vereinfachte erste Zeile lässt sich mit der Funktion $f(x)=(2x-1)^2$ für $x\in \mathbb{N}^+$ beschreiben. Der Abstand in $\alpha$ zweier in $z_1$ aufeinanderfolgenden Ziffern berechnet sich wir folgt:\\
+\begin{align*}
+    d(x+1;x)\:&= f(x+1)-f(x)\\
+    \Leftrightarrow \qquad \qquad\qquad&= (2x+1)^2-(2x-1)^2\\
+    \Leftrightarrow \qquad\qquad\qquad&= 8x
+\end{align*}
+So beträgt der Sprung (=Abstand) von der ersten zur zweiten Ziffer (in vereinfachten $z_1$) 8, der Sprung von der dritten zur vierten Ziffer 24. \\
+Wir bezeichnen die Länge der Periode von $\alpha$ mit k. Welcher Stelle der Periode $k_j$ die Zahl bei $\alpha_i$ entspricht, berechnet man mit modulo. Kurzes beispiel mit $\alpha = 0,\overline{23573} \: (k=5)$:  $\alpha_9$ entspricht der Periodenstelle $k_j = 9\mod{5} = 4$. (Allgemein $k_j = \alpha_j \mod{k}$) Die neunte Ziffer von $\alpha$ entspricht also an der vierten Zahl in der Periode ($\alpha_9 = k_4$).\\
+Nach k Sprüngen sind wir im Vergleich zur 1. Ziffer 
+\begin{align*}
+    k_j &= (8+2\cdot8+3\cdot8+...+k\cdot8) \mod k \nonumber \\
+    \Leftrightarrow \qquad\qquad &= \left( 8\left(k\,\frac{k+1}{2}\right)\right)\mod{k}\\
+    \Leftrightarrow \qquad\qquad &\equiv  0   
+    \intertext{0 Stellen weitergelaufen. Somit sind wir (spätestens) nach k Sprüngen wieder bei der 1. Zahl der Periode. Außerdem sind die nachfolgenden Sprünge wegen $(8k + 8x) \equiv 8x \, mod{k} $ identisch wie die beim ersten mal.}\nonumber
+\end{align*}\\
+\newpage
+Was wir nun bewiesen haben, gilt für jede Zeile, denn die Ziffer der Zeile $m$ haben ab einer gewissen Stelle $n$ einen festen Abstand zur Ziffer der Zeile $z=1$. Genauer gesagt beträgt der Abstand jeder Ziffer $\alpha_i$ der Zahl $z_x$ zur respektiven Zahl $\alpha_i$ in $z_1$ an der Stelle $n=x$ genau $|x-1|$, was  durch die Anordnung ersichtlich ist. Schließlich geht man einmal $x-1$ Felder nach oben zu $z_1$ und einmal $x-1$ Stellen von $z_1$ nach unten. Somit beginnt die Periode der Zahl $z_x $ (spätestens) an der Stelle $n=x$, wobei die Ziffern der anderen Zeilen $z_x$ an ungeraden Stellen $n$ genau $x-1$ "Periodenstellen" $k_j$ vor der eigentlichen Ziffer von $z_1$ in $\alpha$ sind und die Ziffer an geraden Stellen $n$ genau $x-1$ Stellen nach der eigentlichen Ziffer von $z_1$ in $\alpha$ sind. Durch diese regelmäßige verschiebung ist nun bewiesen, dass alle Zeilen $z_m$ periodisch sind, wenn $\alpha$ periodisch ist.
+
+{\bf Beweis der Periodizität der Spalten}:\\
+In der ersten Spalte finden wir die geraden Quadratzahlen an den geraden Stellen $z$ der Zahl $s_1$. Wir berücksichtigen erneut nur diese Quadratzahlen und verwenden ansonsten die gleichen Vereinfachungen. Die Funktion lautet $f(x)=(2x^2)$ für $x\in \mathbb{N}^+$ Für den Abstand zweier aufeinanderfolgenden Zahlen von $s_1$ gilt: 
+\begin{align*}
+    d(x+1;x)\:&= f(x+1)-f(x)\\
+    \Leftrightarrow \qquad \qquad\qquad&= (2x+2)^2-(2x)^2\\
+    \Leftrightarrow \qquad\qquad\qquad&= 8x+4 
+\end{align*}
+Nach k Sprüngen sind wir also wegen
+\begin{align*}
+    \left(8\left(k\frac{k+1}{2}\right)\right) \equiv 4 \mod{k} 
+\end{align*}
+    
+bei der vierten Ziffer. Da $\alpha_4$ die erste Ziffer in unserer vereinfachten Reihe ist, sind wir nach $k$ Sprüngen wieder bei unserer ersten Ziffer angekommen. Wegen $(8k + 8x+ 4) \equiv (8x + 4) \mod{8}$ sind auch die Sprünge periodisch mit der Periodenlänge k. Somit ist $s_1$ auf die Quadratzahlen reduziert periodisch, daher auch die gesamte Spalte $s_1$ und damit sind auch alle Spalten $s_n$ periodisch, wenn $\alpha$ periodisch ist (gleiches Prinzip wie bei den Zeilen).
+
+{\bf (b)}
+Die Umkehrung lautet: Wenn alle $z_m$ und alle $s_n$ rational sind, dann ist $\alpha$ rational. Diese Aussage lässt sich mit einem einfachen Gegenbeispiel widerlegen:\\
+Sei $s_1 = 0,\overline{2}$ und alle restlichen $s_n = 0,\overline{3}.$ Dadurch sind auch alle $z_m$ periodisch mit $z_m = 0,2\overline{3}$. Da der Abstand der den aufeinanderfolgenden Ziffern in $s_1$  entsprechenden Ziffern in $\alpha$ immer zunimmt (ersichtlich durch die größerwerdende Anordnung, bzw. durch die Vergrößerung der Sprünge, siehe (a)), da nimmt auch der Abstand zweier aufeinanderfolgenden $\alpha_i = 3$ stets zu. Somit ist $\alpha_i$ unendlich und nicht periodisch, also nicht rational, und die Aussage nicht umkehrbar. 
+
+
+\end{document}
