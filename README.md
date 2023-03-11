@@ -5,6 +5,6 @@ Die Lösung erhielt einen 1. Preis mit 14/15 Punkten.
 
 
 
-Weiterhin enthalten sind ist Lösung meiner Gruppe für den Bundeswettbewerb Mathematik 2023
+Weiterhin enthalten sind ist Lösung meiner Gruppe für den Bundeswettbewerb Mathematik 2023.
 
 Coming soon
