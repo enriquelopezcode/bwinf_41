@@ -7,4 +7,4 @@ Die Lösung erhielt einen 1. Preis.
 
 ## Lösung meiner Gruppe Bundeswettbewerb Mathematik 2023
 
-Die Lösung erhielt ebenfalls einen 1. Preis .
+Die Lösung erhielt ebenfalls einen 1. Preis.
